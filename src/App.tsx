@@ -1,5 +1,7 @@
 import Button from '@/Components/Button';
 
+import SearchBar from './Components/SearchBar';
+
 function App() {
   return (
     <>
@@ -25,7 +27,10 @@ function App() {
         <Button content="Button" isSecondary color="gray" />
       </div>
       <div className="my-1 flex gap-2 flex-wrap justify-center">
-        <span className="text-[16px] font-bold">검색 폼</span>
+        <span className="text-[16px] font-bold">서치바</span>
+      </div>
+      <div className="my-4 flex gap-2 flex-wrap w-96 justify-center">
+        <SearchBar />
       </div>
     </>
   );
