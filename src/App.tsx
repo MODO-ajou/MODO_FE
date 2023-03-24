@@ -29,7 +29,7 @@ function App() {
       <div className="my-1 flex gap-2 flex-wrap justify-center">
         <span className="text-[16px] font-bold">서치바</span>
       </div>
-      <div className="my-4 flex gap-2 flex-wrap w-96 justify-center">
+      <div className="my-4 flex gap-2 flex-wrap w-full justify-center">
         <SearchBar />
       </div>
     </>
