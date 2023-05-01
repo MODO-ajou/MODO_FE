@@ -2,14 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  margin : 0;
+  padding : 0;
+}
+
 body {
-  /* font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, system-ui,
+  font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, system-ui,
     Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic',
-    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif; */
-  /* font-family: 'Gugi', cursive; */
-  font-family: 'Pretendard';
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
   max-width: 1024px;
+  min-width : 280px;
+  line-height : 1.5;
   margin: 0 auto;
+}
+
+/* 변수 */
+:root {
+  --vh : 100%;
+}
+
+#root {
+  width : 100%;
+  height : var(--vh);
 }
 
 /*  1. margin : 0 auto; */
