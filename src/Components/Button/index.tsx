@@ -11,7 +11,7 @@ export default function Button(props: ButtonProps) {
     dispatchHeirarchy({ isSecondary, type: color });
   }, []);
 
-  const ButtonStyle = `py-2 px-11 rounded-xl border-2 hover:cursor-pointer ${colorHeirarchy}`;
+  const ButtonStyle = `py-3 px-11 text-[20px] rounded-xl border-2 hover:cursor-pointer ${colorHeirarchy}`;
 
   return (
     <>

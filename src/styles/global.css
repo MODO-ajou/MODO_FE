@@ -11,10 +11,11 @@ body {
   font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, system-ui,
     Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic',
     'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
-  max-width: 1024px;
+  /* max-width: 1024px; */
   min-width : 280px;
   line-height : 1.5;
   margin: 0 auto;
+  overflow-x : hidden;
 }
 
 /* 변수 */
@@ -25,6 +26,12 @@ body {
 #root {
   width : 100%;
   height : var(--vh);
+}
+
+h1 {
+  font-size : 2.5rem;
+  line-height : 2.25rem;
+  font-weight : bold;
 }
 
 /*  1. margin : 0 auto; */

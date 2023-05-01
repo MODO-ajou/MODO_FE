@@ -10,7 +10,7 @@
     "prepare": "husky install",
     "lint-staged": "lint-staged"
   },
-   "lint-staged": {
+  "lint-staged": {
     "src/**/*.{ts,tsx}": [
       "eslint --fix",
       "prettier --write"
@@ -47,6 +47,7 @@
     "lint-staged": "^13.1.2",
     "postcss": "^8.4.21",
     "prettier": "^2.8.4",
+    "react-hook-form": "^7.43.9",
     "recoil": "^0.7.6",
     "tailwindcss": "^3.2.7",
     "ts-node": "^10.9.1",
