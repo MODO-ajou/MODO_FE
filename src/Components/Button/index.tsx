@@ -4,7 +4,13 @@ import { ButtonProps } from './types';
 import ButtonReducer from './buttonReducer';
 
 export default function Button(props: ButtonProps) {
-  const { content = 'Button', isSecondary = false, isSubmit = false, color = 'brown1' } = props;
+  const {
+    disabled = false,
+    content = 'Button',
+    isSecondary = false,
+    isSubmit = false,
+    color = 'brown1',
+  } = props;
   const [colorHeirarchy, dispatchHeirarchy] = useReducer(ButtonReducer, '');
 
   useEffect(() => {
@@ -20,7 +26,11 @@ export default function Button(props: ButtonProps) {
           {content}
         </a>
       )}
-      {isSubmit && <button className={ButtonStyle}>{content}</button>}
+      {isSubmit && (
+        <button disabled={disabled} type="submit" className={ButtonStyle}>
+          {content}
+        </button>
+      )}
     </>
   );
 }

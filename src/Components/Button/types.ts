@@ -5,4 +5,5 @@ export interface ButtonProps {
   color?: colorKindsOf;
   isSubmit?: boolean;
   isSecondary?: boolean;
+  disabled?: boolean;
 }

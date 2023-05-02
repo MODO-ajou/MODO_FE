@@ -1,13 +1,4 @@
-import { UseFormRegisterReturn } from 'react-hook-form';
-
-interface InputProps {
-  identity: string;
-  label: string;
-  placehd?: string;
-  message?: string;
-
-  context?: UseFormRegisterReturn;
-}
+import { InputProps } from './types';
 
 /**
  * @param message 상태 메세지 입력
@@ -22,22 +13,24 @@ const Input = (props: InputProps) => {
     label = '입력',
     message = '',
     placehd = `${label}를 입력해주세요`,
+    autoselected = false,
   } = props;
 
   return (
     <>
-      <label className="text-[1.1rem]" htmlFor={identity}>
+      <label className="text-[1.1rem] py-2" htmlFor={identity}>
         {label}
       </label>
       <input
-        className="px-4 py-3 mb-1 border-2 border-[#aaaaaa] rounded"
+        className="px-4 py-3 border-2 border-[#aaaaaa] rounded"
         id={identity}
         type="input"
         placeholder={placehd}
+        autoFocus={autoselected}
         {...context}
         {...props}
       />
-      <p>{message}</p>
+      <p className="text-red text-[0.875rem] py-1 mb-1">{message}</p>
     </>
   );
 };
