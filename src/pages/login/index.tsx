@@ -4,7 +4,7 @@ import Input from '@/Components/Input';
 import Button from '@/Components/Button';
 
 export const LoginPage = () => (
-  <main className="w-full min-w-[1920px] max-w-full flex">
+  <main className="flex w-full min-w-[1270px]">
     <section className="w-1/2 h-screen gap-10 bg-[#FDEEDF] flex items-center flex-col justify-center">
       <img src={modo} />
       <img src={banner} />
@@ -15,6 +15,7 @@ export const LoginPage = () => (
         <form className="w-full flex flex-col gap-3">
           <Input label="아이디" identity="아이디" />
           <Input label="비밀번호" identity="비밀번호" />
+          <div className="py-3" />
           <Button isSubmit content="로그인" />
         </form>
         <p className="text-gray mt-5">아이디/비밀번호를 잊으셨나요?</p>
