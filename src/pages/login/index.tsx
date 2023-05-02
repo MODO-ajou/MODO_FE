@@ -1,7 +1,8 @@
 import { useForm, SubmitHandler } from 'react-hook-form';
+import { Suspense } from 'react';
 
-import modo from '@/assets/modo.svg';
-import banner from '@/assets/login-banner.svg';
+import { ReactComponent as Modo } from '@/assets/modo.svg';
+import { ReactComponent as Banner } from '@/assets/login-banner.svg';
 import Input from '@/Components/Input';
 import Button from '@/Components/Button';
 
@@ -21,8 +22,10 @@ export const LoginPage = () => {
   return (
     <main className="flex w-full min-w-[1270px]">
       <section className="w-1/2 h-screen gap-10 bg-[#FDEEDF] flex items-center flex-col justify-center">
-        <img src={modo} />
-        <img src={banner} />
+        <Suspense fallback={<>로딩</>}>
+          <Modo />
+          <Banner />
+        </Suspense>
       </section>
       <section className="h-screen flex flex-col items-center justify-center w-1/2">
         <div className="w-1/2 mx-auto">
