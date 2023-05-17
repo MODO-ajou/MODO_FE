@@ -4,14 +4,20 @@ import { ButtonProps } from './types';
 import ButtonReducer from './buttonReducer';
 
 export default function Button(props: ButtonProps) {
-  const { content = 'Button', isSecondary = false, isSubmit = false, color = 'brown1' } = props;
+  const {
+    disabled = false,
+    content = 'Button',
+    isSecondary = false,
+    isSubmit = false,
+    color = 'brown1',
+  } = props;
   const [colorHeirarchy, dispatchHeirarchy] = useReducer(ButtonReducer, '');
 
   useEffect(() => {
     dispatchHeirarchy({ isSecondary, type: color });
   }, []);
 
-  const ButtonStyle = `py-2 px-11 rounded-xl border-2 hover:cursor-pointer ${colorHeirarchy}`;
+  const ButtonStyle = `py-3 px-11 text-[20px] rounded-xl border-2 hover:cursor-pointer ${colorHeirarchy}`;
 
   return (
     <>
@@ -20,7 +26,11 @@ export default function Button(props: ButtonProps) {
           {content}
         </a>
       )}
-      {isSubmit && <button className={ButtonStyle}>{content}</button>}
+      {isSubmit && (
+        <button disabled={disabled} type="submit" className={ButtonStyle}>
+          {content}
+        </button>
+      )}
     </>
   );
 }
