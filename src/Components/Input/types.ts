@@ -8,4 +8,6 @@ export interface InputProps {
   autoselected?: boolean;
 
   context?: UseFormRegisterReturn;
+  useButton?: boolean;
+  isButtonContent?: string;
 }

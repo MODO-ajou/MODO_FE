@@ -1,5 +1,6 @@
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { Suspense } from 'react';
+import { Link } from 'react-router-dom';
 
 import { ReactComponent as Modo } from '@/assets/modo.svg';
 import { ReactComponent as Banner } from '@/assets/login-banner.svg';
@@ -28,7 +29,7 @@ export const LoginPage = () => {
         </Suspense>
       </section>
       <section className="h-screen flex flex-col items-center justify-center w-1/2">
-        <div className="w-1/2 mx-auto">
+        <div className="w-3/4 mx-auto">
           <h1 className="text-left mb-14">로그인</h1>
           <form className="w-full flex flex-col" onSubmit={handleSubmit(handleSubmitButton)}>
             <Input
@@ -53,12 +54,15 @@ export const LoginPage = () => {
               })}
             />
             <div className="py-3" />
-            <Button isSubmit content="로그인" disabled={isSubmitting} />
+            <Button isSubmit color="gray" content="로그인" disabled={isSubmitting} />
           </form>
           <p className="text-gray mt-5">아이디/비밀번호를 잊으셨나요?</p>
         </div>
         <span className="absolute text-gray flex gap-3 bottom-10 whitespace-nowrap">
-          아직 회원이 아니신가요? <p className="text-black">회원가입 하러 가기</p>
+          아직 회원이 아니신가요?{' '}
+          <Link to="/signup" className="text-yellow-600">
+            회원가입 하러 가기
+          </Link>
         </span>
       </section>
     </main>

@@ -17,14 +17,13 @@ export default function Button(props: ButtonProps) {
     dispatchHeirarchy({ isSecondary, type: color });
   }, []);
 
-  const ButtonStyle = `py-3 px-11 text-[20px] rounded-xl border-2 hover:cursor-pointer ${colorHeirarchy}`;
-
+  const ButtonStyle = `py-2 h-[52px] px-5 text-[15px] rounded-xl border-2 whitespace-nowrap hover:cursor-pointer ${colorHeirarchy}`;
   return (
     <>
       {!isSubmit && (
-        <a className={ButtonStyle} href="/ee">
+        <button disabled={disabled} type="button" className={ButtonStyle}>
           {content}
-        </a>
+        </button>
       )}
       {isSubmit && (
         <button disabled={disabled} type="submit" className={ButtonStyle}>

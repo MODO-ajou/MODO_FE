@@ -1,3 +1,5 @@
+import Button from '@/Components/Button';
+
 import { InputProps } from './types';
 
 /**
@@ -14,23 +16,30 @@ const Input = (props: InputProps) => {
     message = '',
     placehd = `${label}를 입력해주세요`,
     autoselected = false,
+    useButton = false,
+    isButtonContent = '확인',
   } = props;
+
+  const ButtonStyle = `px-4 py-3 text-[15px] border-2 border-[#aaaaaa] rounded w-full`;
 
   return (
     <>
-      <label className="text-[1.1rem] py-2" htmlFor={identity}>
+      <label className="text-[1.1rem]" htmlFor={identity}>
         {label}
       </label>
-      <input
-        className="px-4 py-3 border-2 border-[#aaaaaa] rounded"
-        id={identity}
-        type="input"
-        placeholder={placehd}
-        autoFocus={autoselected}
-        {...context}
-        {...props}
-      />
-      <p className="text-red text-[0.875rem] py-1 mb-1">{message}</p>
+      <div className="flex justify-between gap-2">
+        <input
+          className={ButtonStyle}
+          id={identity}
+          type="input"
+          placeholder={placehd}
+          autoFocus={autoselected}
+          {...context}
+          {...props}
+        />
+        {useButton && <Button color="brown1" content={isButtonContent} />}
+      </div>
+      <p className="text-red text-[0.875rem] py-1">{message}</p>
     </>
   );
 };
