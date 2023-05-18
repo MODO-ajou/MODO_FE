@@ -5,7 +5,6 @@ import SignupPage from '@/pages/signup';
 
 function App() {
   const location = useLocation();
-
   return (
     <>
       <Routes key={location.pathname} location={location}>

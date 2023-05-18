@@ -14,11 +14,9 @@ export const SignupPage = () => {
   } = useForm({
     mode: 'onSubmit',
   });
-
   const handleSubmitButton: SubmitHandler<any> = (data) => {
     alert(JSON.stringify(data));
   };
-
   return (
     <main className="flex w-full min-w-[1270px]">
       <section className="w-1/2 h-screen gap-12 bg-[#FDEEDF] flex items-center flex-col justify-center">
