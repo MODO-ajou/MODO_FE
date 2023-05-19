@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
 
+import { ReactComponent as Location } from '@/assets/location.svg';
+
 export default function Map() {
   const [mapPoint, setMapPoint] = useState({ x: null, y: null });
   const [location, setLocation] = useState('');
@@ -39,7 +41,20 @@ export default function Map() {
   }, []);
   return (
     <div>
-      <div id="map" style={{ width: '1065px', height: '579px' }} />
+      <div
+        id="map"
+        className="rounded-xl"
+        style={{
+          width: '650px',
+          height: '350px',
+          zIndex: '2',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}
+      >
+        <Location className="absolute z-40" />
+      </div>
       <div>{mapPoint.x}</div>
       <div>{mapPoint.y}</div>
       <div>주소는 : {location}</div>
