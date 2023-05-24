@@ -3,8 +3,7 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import LoginPage from '@/pages/login';
 import SignupPage from '@/pages/signup';
 import Map from '@/Components/Map';
-
-import SignupPage2 from './pages/signup2';
+import LocationValidationPage from '@/pages/LocationValidationPage';
 
 function App() {
   const location = useLocation();
@@ -24,7 +23,7 @@ function App() {
 
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<SignupPage />} />
-        <Route path="/signup2" element={<SignupPage2 />} />
+        <Route path="/LocationValidationPage" element={<LocationValidationPage />} />
       </Routes>
     </>
   );
