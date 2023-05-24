@@ -17,7 +17,7 @@ export const SignupPage = () => {
   });
   const handleSubmitButton: SubmitHandler<any> = (data) => {
     alert(JSON.stringify(data));
-    navigate('/signup2');
+    navigate('/LocationValidationPage');
   };
   return (
     <main className="flex w-full min-w-[1270px]">

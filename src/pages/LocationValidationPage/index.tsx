@@ -6,7 +6,7 @@ import { ReactComponent as Banner } from '@/assets/login-banner.svg';
 import Map from '@/Components/Map';
 import SearchBar from '@/Components/SearchBar';
 
-export const SignupPage2 = () => {
+export const LocationValidationPage = () => {
   const {
     handleSubmit,
     formState: { isSubmitting },
@@ -41,4 +41,4 @@ export const SignupPage2 = () => {
   );
 };
 
-export default SignupPage2;
+export default LocationValidationPage;
