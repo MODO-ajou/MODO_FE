@@ -1,5 +1,5 @@
 import { useForm, SubmitHandler } from 'react-hook-form';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 import Button from '@/Components/Button';
 import { ReactComponent as Modo } from '@/assets/modo.svg';
@@ -7,6 +7,7 @@ import { ReactComponent as Banner } from '@/assets/login-banner.svg';
 import Input from '@/Components/Input';
 
 export const SignupPage = () => {
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
@@ -16,6 +17,7 @@ export const SignupPage = () => {
   });
   const handleSubmitButton: SubmitHandler<any> = (data) => {
     alert(JSON.stringify(data));
+    navigate('/signup2');
   };
   return (
     <main className="flex w-full min-w-[1270px]">
