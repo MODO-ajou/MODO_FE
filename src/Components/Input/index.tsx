@@ -14,7 +14,7 @@ const Input = (props: InputProps) => {
     identity,
     label = '입력',
     message = '',
-    placehd = `${label}를 입력해주세요`,
+    placehd = `${label} 입력해주세요`,
     autoselected = false,
     useButton = false,
     isButtonContent = '확인',

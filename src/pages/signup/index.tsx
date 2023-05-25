@@ -39,15 +39,15 @@ export const SignupPage = () => {
           <h1 className="text-left mb-3">회원가입</h1>
           <form className="w-full flex flex-col" onSubmit={handleSubmit(handleSubmitButton)}>
             <Input
-              label="아이디"
-              identity="아이디"
+              label="이메일"
+              identity="이메일"
               placehd="영문으로 입력해주세요."
               autoselected
               message={errors.userId?.message?.toString()}
               useButton
               isButtonContent="중복확인"
               context={register('userId', {
-                required: '아이디를 입력하세요.',
+                required: '메일을 입력하세요.',
               })}
             />
             <Input
