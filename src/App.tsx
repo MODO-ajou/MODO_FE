@@ -2,8 +2,9 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 
 import LoginPage from '@/pages/login';
 import SignupPage from '@/pages/signup';
-import Map from '@/Components/Map';
 import LocationValidationPage from '@/pages/locationvalidation';
+
+import MainPage from './pages/mainpage';
 
 function App() {
   const location = useLocation();
@@ -11,15 +12,7 @@ function App() {
   return (
     <>
       <Routes key={location.pathname} location={location}>
-        <Route
-          path="/"
-          element={
-            <>
-              메인 페이지 입니다
-              <Map></Map>
-            </>
-          }
-        />
+        <Route path="/" element={<MainPage />} />
 
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<SignupPage />} />

@@ -1,5 +1,6 @@
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { Link, useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
 
 import Button from '@/Components/Button';
 import { ReactComponent as Modo } from '@/assets/modo.svg';
@@ -19,6 +20,14 @@ export const SignupPage = () => {
     alert(JSON.stringify(data));
     navigate('/locationvalidation');
   };
+  useEffect(() => {
+    document.querySelector('body')!.style.width = '100%';
+
+    return () => {
+      document.querySelector('body')!.style.width = '1270px';
+      document.querySelector('body')!.style.margin = '0 auto';
+    };
+  }, []);
   return (
     <main className="flex w-full min-w-[1270px]">
       <section className="w-1/2 h-screen gap-12 bg-[#FDEEDF] flex items-center flex-col justify-center">
@@ -49,8 +58,8 @@ export const SignupPage = () => {
               context={register('userPw', {
                 required: '비밀번호를 입력하세요',
                 minLength: {
-                  value: 6,
-                  message: '6자리 이상 비밀번호를 사용하세요',
+                  value: 8,
+                  message: '8자리 이상 비밀번호를 사용하세요',
                 },
               })}
             />
