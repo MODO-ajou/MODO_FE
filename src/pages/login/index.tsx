@@ -1,5 +1,5 @@
 import { useForm, SubmitHandler } from 'react-hook-form';
-import { Suspense } from 'react';
+import { useEffect, Suspense } from 'react';
 import { Link } from 'react-router-dom';
 
 import { ReactComponent as Modo } from '@/assets/modo.svg';
@@ -20,6 +20,15 @@ export const LoginPage = () => {
     alert(JSON.stringify(data));
   };
 
+  useEffect(() => {
+    document.querySelector('body')!.style.width = '100%';
+
+    return () => {
+      document.querySelector('body')!.style.width = '1270px';
+      document.querySelector('body')!.style.margin = '0 auto';
+    };
+  }, []);
+
   return (
     <main className="flex w-full min-w-[1270px]">
       <section className="w-1/2 h-screen gap-10 bg-[#FDEEDF] flex items-center flex-col justify-center">
@@ -33,12 +42,12 @@ export const LoginPage = () => {
           <h1 className="text-left mb-14">로그인</h1>
           <form className="w-full flex flex-col" onSubmit={handleSubmit(handleSubmitButton)}>
             <Input
-              label="아이디"
-              identity="아이디"
+              label="이메일"
+              identity="이메일"
               autoselected
               message={errors.userId?.message?.toString()}
               context={register('userId', {
-                required: '아이디를 입력하세요.',
+                required: '이메일을 입력하세요.',
               })}
             />
             <Input

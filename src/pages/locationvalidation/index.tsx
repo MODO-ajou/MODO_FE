@@ -1,4 +1,5 @@
 import { useForm, SubmitHandler } from 'react-hook-form';
+import { useEffect } from 'react';
 
 import Button from '@/Components/Button';
 import { ReactComponent as Modo } from '@/assets/modo.svg';
@@ -16,6 +17,14 @@ export const LocationValidationPage = () => {
   const handleSubmitButton: SubmitHandler<any> = (data) => {
     alert(JSON.stringify(data));
   };
+  useEffect(() => {
+    document.querySelector('body')!.style.width = '100%';
+
+    return () => {
+      document.querySelector('body')!.style.width = '1270px';
+      document.querySelector('body')!.style.margin = '0 auto';
+    };
+  }, []);
   return (
     <main className="flex w-full min-w-[1270px]">
       <section className="w-1/2 h-screen gap-12 bg-[#FDEEDF] flex items-center flex-col justify-center">
