@@ -1,8 +1,7 @@
 // import Swiper core and required modules
 import SwiperCore, { Autoplay, Pagination, A11y } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import React from 'react';
-
+import React, { useEffect } from 'react';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -10,10 +9,12 @@ import 'swiper/css/autoplay';
 
 export default function Banner() {
   SwiperCore.use([Autoplay]);
+
   return (
     <>
       <Swiper
         // install Swiper modules
+        className="drop-shadow-lg"
         modules={[Pagination, Autoplay, A11y]}
         spaceBetween={50}
         slidesPerView={1}
