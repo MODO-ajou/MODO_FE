@@ -8,7 +8,7 @@ export const MainPage = () => (
     <Header />
     <Banner />
     <ItemTitle />
-    <ItemList />
+    <ItemList itemName="원씽 The One Thing" itemPrice="500" itemState="대여가능" />
   </>
 );
 
