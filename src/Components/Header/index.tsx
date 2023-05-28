@@ -15,7 +15,7 @@ export const Header = () => {
     {
       icons: <BsPlusSquare />,
       text: '책 빌려주기',
-      goTo: 'addBook',
+      goTo: 'addbook',
     },
     {
       icons: <BsBook />,
@@ -25,7 +25,7 @@ export const Header = () => {
     {
       icons: <BsHeart />,
       text: '위시리스트',
-      goTo: 'wishList',
+      goTo: 'wishlist',
     },
     {
       icons: <BsChat />,
@@ -35,12 +35,12 @@ export const Header = () => {
     {
       icons: <BsPeople />,
       text: '마이 페이지',
-      goTo: 'myPage',
+      goTo: 'mypage',
     },
   ];
 
   return (
-    <header className="w-full flex py-3 justify-between">
+    <header className="w-full flex py-3 justify-between ">
       <MODO className="py-3" />
       <div>
         <div className="text-right text-sm ">로그아웃</div>
