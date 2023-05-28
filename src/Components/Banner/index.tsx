@@ -24,6 +24,9 @@ export default function Banner() {
         onSlideChange={() => console.log('slide change')}
       >
         <SwiperSlide>
+          <img className="w-full h-72" src="src/assets/ModoEventBanner.jpeg"></img>
+        </SwiperSlide>
+        <SwiperSlide>
           <img className="w-full h-72" src="src/assets/kreamImg.png"></img>
         </SwiperSlide>
         <SwiperSlide>
