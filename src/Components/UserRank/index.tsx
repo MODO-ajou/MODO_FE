@@ -13,7 +13,7 @@ export default function UserRank(props: UserRankProps) {
           {/* <div className=" flex w-[60px]  h-[50px] mx-3 w-1/4 relative  border">
             <Banner className='' />
           </div> */}
-          <Banner className=" flex w-[60px]  h-[50px] mx-3 w-1/4 relative  border"></Banner>
+          <Banner className=" flex w-[60px]  h-[50px] mx-3 w-1/4 relative  border border border-gray rounded-md"></Banner>
           <div className="flex flex-col w-3/4">
             <div className="mx-2 font-semibold font-sm flex">
               {UserRankName}
@@ -26,7 +26,7 @@ export default function UserRank(props: UserRankProps) {
           {/* <div className=" flex w-[60px]  h-[50px] mx-3 w-1/4 relative  border">
             <Banner className='' />
           </div> */}
-          <Banner className=" flex w-[60px]  h-[50px] mx-3 w-1/4 relative  border"></Banner>
+          <Banner className=" flex w-[60px]  h-[50px] mx-3 w-1/4 relative  border border-gray rounded-md"></Banner>
           <div className="flex flex-col w-3/4">
             <div className="mx-2 font-semibold font-sm flex">
               {UserRankName}
@@ -39,7 +39,7 @@ export default function UserRank(props: UserRankProps) {
           {/* <div className=" flex w-[60px]  h-[50px] mx-3 w-1/4 relative  border">
             <Banner className='' />
           </div> */}
-          <Banner className=" flex w-[60px]  h-[50px] mx-3 w-1/4 relative  border"></Banner>
+          <Banner className=" flex w-[60px]  h-[50px] mx-3 w-1/4 relative  border border-gray rounded-md"></Banner>
           <div className="flex flex-col w-3/4">
             <div className="mx-2 font-semibold font-sm flex">
               {UserRankName}

@@ -24,16 +24,16 @@ export default function Banner() {
         onSlideChange={() => console.log('slide change')}
       >
         <SwiperSlide>
-          <img className="w-full h-72" src="src/assets/ModoEventBanner.jpeg"></img>
+          <img className="cursor-pointer" src="src/assets/ModoEventBanner.jpeg"></img>
         </SwiperSlide>
         <SwiperSlide>
-          <img className="w-full h-72" src="src/assets/kreamImg.png"></img>
+          <img className="w-full h-72 " src="src/assets/kreamImg.png"></img>
         </SwiperSlide>
         <SwiperSlide>
-          <img className="w-full h-72" src="src/assets/whiteModo.png"></img>
+          <img className="w-full h-72 " src="src/assets/whiteModo.png"></img>
         </SwiperSlide>
         <SwiperSlide>
-          <img className="w-full h-72" src="src/assets/pinkModo.png"></img>
+          <img className="w-full h-72 " src="src/assets/pinkModo.png"></img>
         </SwiperSlide>
       </Swiper>
     </>
