@@ -1,7 +1,7 @@
 import { useReducer, useEffect } from 'react';
 
 import { SmallButtonProps } from './types';
-import ButtonReducer from './smallButtonReducer';
+import smallButtonReducer from './smallButtonReducer';
 
 export default function SmallButton(props: SmallButtonProps) {
   const {
@@ -11,7 +11,7 @@ export default function SmallButton(props: SmallButtonProps) {
     isSubmit = false,
     color = 'brown2',
   } = props;
-  const [colorHeirarchy, dispatchHeirarchy] = useReducer(ButtonReducer, '');
+  const [colorHeirarchy, dispatchHeirarchy] = useReducer(smallButtonReducer, '');
 
   useEffect(() => {
     dispatchHeirarchy({ isSecondary, type: color });
