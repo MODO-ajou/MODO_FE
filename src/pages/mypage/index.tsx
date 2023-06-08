@@ -17,7 +17,7 @@ const MyPage = () => (
         </div>
         <div className="w-1/6">
           <ItemTitle itemMainTitle="" itemSubTitle="사용자 랭킹" itemToggle={true} />
-          <UserRank UserRankName="박시연의 도서관" UserRankGrade="1위" />
+          <UserRank />
         </div>
       </div>
       <div className="flex">
@@ -27,7 +27,7 @@ const MyPage = () => (
         </div>
         <div className="w-1/5">
           <ItemTitle itemMainTitle="" itemSubTitle="인기 대여 책" itemToggle={true} />
-          <UserRank UserRankName="구멍가게 이야기" UserRankGrade="박시연의 도서관" />
+          <UserRank />
         </div>
       </div>
     </div>
