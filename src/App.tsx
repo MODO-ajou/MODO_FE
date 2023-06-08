@@ -1,5 +1,6 @@
 import { Routes, Route, useLocation } from 'react-router-dom';
 
+import AddBook from '@/pages/addbook';
 import LoginPage from '@/pages/login';
 import SignupPage from '@/pages/signup';
 import MainPage from '@/pages/mainpage';
@@ -16,7 +17,7 @@ function App() {
         <Route path="/" element={<LoginPage />} />
         <Route path="/mainpage" element={<MainPage />} />
         <Route path="/login" element={<LoginPage />} />
-        {/* <Route path="/addreview" element={<AddReview />} /> */}
+        <Route path="/addbook" element={<AddBook />} />
         <Route path="/signup" element={<SignupPage />} />
         <Route path="/mypage" element={<MyPage />} />
       </Routes>

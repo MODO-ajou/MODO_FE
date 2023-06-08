@@ -1,6 +1,7 @@
 import { Link, useNavigate } from 'react-router-dom';
 import { BsPlusSquare, BsHeart, BsBook, BsChat, BsPeople } from 'react-icons/bs';
 import React from 'react';
+import toast from 'sweetalert2';
 
 import { ReactComponent as MODO } from '@/assets/small-modo.svg';
 
@@ -22,17 +23,17 @@ export const Header = () => {
     {
       icons: <BsBook />,
       text: '대여현황',
-      goTo: '',
+      goTo: 'mainpage',
     },
     {
       icons: <BsHeart />,
       text: '위시리스트',
-      goTo: '',
+      goTo: 'mainpage',
     },
     {
       icons: <BsChat />,
       text: '채팅',
-      goTo: '',
+      goTo: 'mainpage',
     },
     {
       icons: <BsPeople />,
@@ -40,7 +41,6 @@ export const Header = () => {
       goTo: 'mypage',
     },
   ];
-
   return (
     <header className="w-full flex py-3 justify-between ">
       <MODO
@@ -50,7 +50,21 @@ export const Header = () => {
         }}
       />
       <div>
-        <div className="text-right text-sm cursor-pointer ">로그아웃</div>
+        <div
+          className="text-right text-sm cursor-pointer"
+          onClick={() => {
+            localStorage.clear();
+            toast.fire({
+              icon: 'error',
+              title: '로그아웃 되었어요!',
+              showConfirmButton: false,
+              timer: 1500,
+            });
+            navigate('/login');
+          }}
+        >
+          로그아웃
+        </div>
         <div className="flex  gap-2  py-3 justify-between last:border-none remove-border-right">
           {NavBarList.map((item, idx) => (
             <Link to={`/${item.goTo}`} key={idx}>

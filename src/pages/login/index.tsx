@@ -18,8 +18,8 @@ export const LoginPage = () => {
     mode: 'onSubmit',
   });
 
-  const handleSubmitButton: SubmitHandler<any> = (data) => {
-    console.log(JSON.stringify(data));
+  const handleSubmitButton: SubmitHandler<any> = () => {
+    // console.log(JSON.stringify(data));
 
     toast.fire({
       icon: 'success',
