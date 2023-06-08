@@ -6,6 +6,7 @@ import Button from '@/Components/Button';
 import { ReactComponent as Modo } from '@/assets/modo.svg';
 import { ReactComponent as Banner } from '@/assets/login-banner.svg';
 import Input from '@/Components/Input';
+import HiddenInput from '@/Components/HiddenInput';
 
 export const SignupPage = () => {
   const navigate = useNavigate();
@@ -50,20 +51,19 @@ export const SignupPage = () => {
                 required: '메일을 입력하세요.',
               })}
             />
-            <Input
+            <HiddenInput
               label="비밀번호"
               identity="비밀번호"
-              placehd="영문,숫자 포함 8자 이상으로 입력해주세요."
-              message={errors.userPw?.message?.toString()}
-              context={register('userPw', {
+              message={errors.password?.message?.toString()}
+              context={register('password', {
                 required: '비밀번호를 입력하세요',
                 minLength: {
-                  value: 8,
-                  message: '8자리 이상 비밀번호를 사용하세요',
+                  value: 6,
+                  message: '6자리 이상 비밀번호를 사용하세요',
                 },
               })}
             />
-            <Input
+            <HiddenInput
               label="비밀번호 확인"
               identity="비밀번호 확인"
               placehd="비밀번호를 다시 한번 더 입력해주세요."

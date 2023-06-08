@@ -3,6 +3,7 @@ import { useEffect, Suspense } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import toast from 'sweetalert2';
 
+import HiddenInput from '@/Components/HiddenInput';
 import { ReactComponent as Modo } from '@/assets/modo.svg';
 import { ReactComponent as Banner } from '@/assets/login-banner.svg';
 import Input from '@/Components/Input';
@@ -60,7 +61,7 @@ export const LoginPage = () => {
                 required: '이메일을 입력하세요.',
               })}
             />
-            <Input
+            <HiddenInput
               label="비밀번호"
               identity="비밀번호"
               message={errors.password?.message?.toString()}
