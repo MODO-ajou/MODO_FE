@@ -22,17 +22,17 @@ export const Header = () => {
     {
       icons: <BsBook />,
       text: '대여현황',
-      goTo: 'dealList',
+      goTo: '',
     },
     {
       icons: <BsHeart />,
       text: '위시리스트',
-      goTo: 'wishlist',
+      goTo: '',
     },
     {
       icons: <BsChat />,
       text: '채팅',
-      goTo: 'chat',
+      goTo: '',
     },
     {
       icons: <BsPeople />,
@@ -53,7 +53,7 @@ export const Header = () => {
         <div className="text-right text-sm cursor-pointer ">로그아웃</div>
         <div className="flex  gap-2  py-3 justify-between last:border-none remove-border-right">
           {NavBarList.map((item, idx) => (
-            <Link to={item.goTo} key={idx}>
+            <Link to={`/${item.goTo}`} key={idx}>
               <p className="flex border-r-2 border-gray justify-center items-center gap-2 px-3">
                 {item.icons}
                 {item.text}

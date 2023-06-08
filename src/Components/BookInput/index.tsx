@@ -18,7 +18,7 @@ export default function BookInput() {
         <div className="h-full  h-[270px]  px-6 text-black text-md">
           <input
             type="text"
-            className="h-full w-full focus:outline-none "
+            className="h-[270px] w-full focus:outline-none "
             placeholder="내용을 작성해주세요."
           />
         </div>
