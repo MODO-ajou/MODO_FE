@@ -16,8 +16,8 @@ export const SignupPage = () => {
   } = useForm({
     mode: 'onSubmit',
   });
-  const handleSubmitButton: SubmitHandler<any> = (data) => {
-    alert(JSON.stringify(data));
+  const handleSubmitButton: SubmitHandler<any> = () => {
+    // alert(JSON.stringify(data));
     navigate('/locationvalidation');
   };
   useEffect(() => {

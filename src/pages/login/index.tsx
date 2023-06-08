@@ -1,6 +1,7 @@
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { useEffect, Suspense } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import toast from 'sweetalert2';
 
 import { ReactComponent as Modo } from '@/assets/modo.svg';
 import { ReactComponent as Banner } from '@/assets/login-banner.svg';
@@ -8,6 +9,7 @@ import Input from '@/Components/Input';
 import Button from '@/Components/Button';
 
 export const LoginPage = () => {
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
@@ -16,8 +18,16 @@ export const LoginPage = () => {
     mode: 'onSubmit',
   });
 
-  const handleSubmitButton: SubmitHandler<any> = (data) => {
-    alert(JSON.stringify(data));
+  const handleSubmitButton: SubmitHandler<any> = () => {
+    // console.log(JSON.stringify(data));
+
+    toast.fire({
+      icon: 'success',
+      title: '로그인 성공',
+      showConfirmButton: false,
+      timer: 1500,
+    });
+    navigate('/mainpage');
   };
 
   useEffect(() => {

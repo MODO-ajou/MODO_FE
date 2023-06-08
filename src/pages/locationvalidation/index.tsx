@@ -1,5 +1,7 @@
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { useEffect } from 'react';
+import toast from 'sweetalert2';
+import { useNavigate } from 'react-router-dom';
 
 import Button from '@/Components/Button';
 import { ReactComponent as Modo } from '@/assets/modo.svg';
@@ -8,14 +10,22 @@ import Map from '@/Components/Map';
 import SearchBar from '@/Components/SearchBar';
 
 export const LocationValidationPage = () => {
+  const navigate = useNavigate();
   const {
     handleSubmit,
     formState: { isSubmitting },
   } = useForm({
     mode: 'onSubmit',
   });
-  const handleSubmitButton: SubmitHandler<any> = (data) => {
-    alert(JSON.stringify(data));
+  const handleSubmitButton: SubmitHandler<any> = () => {
+    // alert(JSON.stringify(data));
+    toast.fire({
+      icon: 'success',
+      title: '회원가입을 축하드립니다!',
+      showConfirmButton: false,
+      timer: 1500,
+    });
+    navigate('/');
   };
   useEffect(() => {
     document.querySelector('body')!.style.width = '100%';
@@ -39,7 +49,7 @@ export const LocationValidationPage = () => {
             <Map />
             <div className="flex flex-col">
               <div className="py-1" />
-              <SearchBar content="경기도 수원시 팔달구 중부대로 223" />
+              <SearchBar content="경기도 수원시 영통구 원천동 월드컵로 206" />
               <div className="py-3" />
               <Button isSubmit content="다음" disabled={isSubmitting} color="brown1" />
             </div>
