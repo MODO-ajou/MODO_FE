@@ -1,6 +1,6 @@
 import { UseFormRegisterReturn } from 'react-hook-form';
 
-export interface InputProps {
+export interface HiddenInputProps {
   identity: string;
   label: string;
   placehd?: string;

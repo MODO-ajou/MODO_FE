@@ -1,23 +1,23 @@
 import { useReducer, useEffect } from 'react';
 
-import { ButtonProps } from './types';
-import ButtonReducer from './buttonReducer';
+import { SmallButtonProps } from './types';
+import smallButtonReducer from './smallButtonReducer';
 
-export default function Button(props: ButtonProps) {
+export default function SmallButton(props: SmallButtonProps) {
   const {
     disabled = false,
     content = 'Button',
     isSecondary = false,
     isSubmit = false,
-    color = 'brown1',
+    color = 'brown2',
   } = props;
-  const [colorHeirarchy, dispatchHeirarchy] = useReducer(ButtonReducer, '');
+  const [colorHeirarchy, dispatchHeirarchy] = useReducer(smallButtonReducer, '');
 
   useEffect(() => {
     dispatchHeirarchy({ isSecondary, type: color });
   }, []);
 
-  const ButtonStyle = `py-2 h-[52px] px-5 text-[15px] rounded-xl border-2 whitespace-nowrap hover:cursor-pointer ${colorHeirarchy}`;
+  const ButtonStyle = `  h-[25px] px-2 text-[12px] text-justify rounded-ml border-2 whitespace-nowrap hover:cursor-pointer ${colorHeirarchy}`;
   return (
     <>
       {!isSubmit && (
