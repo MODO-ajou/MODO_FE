@@ -31,7 +31,7 @@ export default function UserRank() {
               <div className="mx-2 font-semibold text-[12px] flex">
                 <div className="text-[14px] font-bold ">{item.UserRankName}</div>의 도서관
               </div>
-              <div className="mx-2 text-[10px] ">{item.UserRankGrade}</div>
+              <div className="mx-2 text-[10px] text-brown ">{item.UserRankGrade}</div>
             </div>
           </div>
         ))}

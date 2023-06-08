@@ -34,7 +34,7 @@ export default function ItemList() {
     },
     {
       itemPrice: '700',
-      itemName: '나는 자기계발서를 읽고 벤츠를 샀다.',
+      itemName: '나는 자기계발서를 읽고 벤츠를 ...',
       itemState: '대여가능',
       itemUrl: 'src/assets/books/benz.jpeg',
     },
@@ -69,9 +69,9 @@ export default function ItemList() {
       <Swiper
         className="drop-shadow-lg"
         modules={[Pagination, Autoplay, A11y]}
-        spaceBetween={50}
-        slidesPerView={3}
-        autoplay={{ delay: 1500 }}
+        spaceBetween={20}
+        slidesPerView={4}
+        autoplay={{ delay: 3000 }}
         pagination={{ clickable: true }}
         scrollbar={{ draggable: true }}
         // onSwiper={(swiper) => console.log(swiper)}
@@ -80,7 +80,7 @@ export default function ItemList() {
         {BookList.map((item, idx) => (
           <SwiperSlide key={idx}>
             <div className="flex" key={idx}>
-              <div className="flex  flex-col gap-1 align-text-bottom  w-[250px] h-[300px] border rounded-xl border-gray  relative overflow-hidden">
+              <div className="flex  flex-col gap-1 align-text-bottom  w-[230px] h-[300px] border rounded-xl border-gray  relative overflow-hidden">
                 <img
                   className=" border border-gray border-l-0 border-r-0 border-t-0 left-0 top-0 h-3/5 "
                   src={item.itemUrl}

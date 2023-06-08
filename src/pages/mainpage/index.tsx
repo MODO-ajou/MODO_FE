@@ -10,9 +10,13 @@ export const MainPage = () => (
     <Banner />
     <div className="flex-col my-1 bg-btown">
       <div className="flex">
-        <div className="w-5/6">
+        <div className="w-5/6 flex-col">
           <ItemTitle itemMainTitle="수원시" itemSubTitle="의 매물" itemToggle={true} />
-          <div className="w-[1200px] w-full gap-3 py-3 flex flex-wrap">
+          <div className="w-[1200px] w-full gap-0 py-3 flex flex-wrap">
+            <ItemList />
+          </div>
+          <ItemTitle itemMainTitle="수원시" itemSubTitle="의 매물" itemToggle={true} />
+          <div className="w-[1200px] w-full gap-0 py-3 flex flex-wrap">
             <ItemList />
           </div>
         </div>
