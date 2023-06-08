@@ -37,7 +37,7 @@ const HiddenInput = (props: HiddenInputProps) => {
           {...context}
           {...props}
         />
-        {useButton && <Button color="mainColor" content={isButtonContent} />}
+        {useButton && <Button content={isButtonContent} />}
       </div>
       <p className="text-red text-[0.875rem] py-1">{message}</p>
     </>
