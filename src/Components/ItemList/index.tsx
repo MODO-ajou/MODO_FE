@@ -10,7 +10,7 @@ export default function ItemList() {
   //   itemPrice = '500',
   //   itemName = '원씽 The One Thing',
   //   itemState = '대여가능',
-  //   itemUrl = 'public/images/oneTHing.png',
+  //   itemUrl = '/images/oneTHing.png',
   // } = props;
 
   const BookList = [
@@ -18,49 +18,49 @@ export default function ItemList() {
       itemPrice: '1500',
       itemName: '최애의 아이',
       itemState: '대여가능',
-      itemUrl: 'public/images/cho.jpeg',
+      itemUrl: '/images/cho.jpeg',
     },
     {
       itemPrice: '1000',
       itemName: '세이노의 가르침',
       itemState: '대여가능',
-      itemUrl: 'public/images/seino.jpeg',
+      itemUrl: '/images/seino.jpeg',
     },
     {
       itemPrice: '500',
       itemName: '5년 후 나는 어디에 있을 것인가?',
       itemState: '대여가능',
-      itemUrl: 'public/images/5y.jpeg',
+      itemUrl: '/images/5y.jpeg',
     },
     {
       itemPrice: '700',
       itemName: '나는 자기계발서를 읽고 벤츠를 ...',
       itemState: '대여가능',
-      itemUrl: 'public/images/benz.jpeg',
+      itemUrl: '/images/benz.jpeg',
     },
     {
       itemPrice: '500',
       itemName: '원씽 The One Thing',
       itemState: '대여가능',
-      itemUrl: 'public/images/oneTHing.png',
+      itemUrl: '/images/oneTHing.png',
     },
     {
       itemPrice: '500',
       itemName: '햄릿',
       itemState: '대여가능',
-      itemUrl: 'public/images/ham.jpeg',
+      itemUrl: '/images/ham.jpeg',
     },
     {
       itemPrice: '500',
       itemName: '정의란 무엇인가?',
       itemState: '대여가능',
-      itemUrl: 'public/images/justice.jpeg',
+      itemUrl: '/images/justice.jpeg',
     },
     {
       itemPrice: '500',
       itemName: '한 문장으로 말하라',
       itemState: '대여가능',
-      itemUrl: 'public/images/word.jpeg',
+      itemUrl: '/images/word.jpeg',
     },
   ];
   SwiperCore.use([Autoplay]);

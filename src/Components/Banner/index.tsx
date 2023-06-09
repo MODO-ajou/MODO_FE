@@ -11,16 +11,16 @@ import 'swiper/css/autoplay';
 export default function Banner() {
   const BannerList = [
     {
-      src: 'public/images/ModoBanner1.jpeg',
+      src: '/images/ModoBanner1.jpeg',
     },
     {
-      src: 'public/images/ModoBanner2.jpeg',
+      src: '/images/ModoBanner2.jpeg',
     },
     {
-      src: 'public/images/ModoBanner3.jpeg',
+      src: '/images/ModoBanner3.jpeg',
     },
     {
-      src: 'public/images/ModoBanner4.jpeg',
+      src: '/images/ModoBanner4.jpeg',
     },
   ];
   SwiperCore.use([Autoplay]);
@@ -42,21 +42,21 @@ export default function Banner() {
         {BannerList.map((item, idx) => (
           <SwiperSlide key={idx}>
             <a href="https://www.apple.com/kr/app-store/">
-              <img className="cursor-pointer" src={item.src}></img>
+              <img className="cursor-pointer" src={item.src} alt={item.src}></img>
             </a>
           </SwiperSlide>
         ))}
         {/* <SwiperSlide>
-          <img className="cursor-pointer" src="public/images/ModoEventBanner.jpeg"></img>
+          <img className="cursor-pointer" src="/images/ModoEventBanner.jpeg"></img>
         </SwiperSlide>
         <SwiperSlide>
-          <img className="w-full h-72 " src="public/images/kreamImg.png"></img>
+          <img className="w-full h-72 " src="/images/kreamImg.png"></img>
         </SwiperSlide>
         <SwiperSlide>
-          <img className="w-full h-72 " src="public/images/whiteModo.png"></img>
+          <img className="w-full h-72 " src="/images/whiteModo.png"></img>
         </SwiperSlide>
         <SwiperSlide>
-          <img className="w-full h-72 " src="public/images/pinkModo.png"></img>
+          <img className="w-full h-72 " src="/images/pinkModo.png"></img>
         </SwiperSlide> */}
       </Swiper>
     </>
