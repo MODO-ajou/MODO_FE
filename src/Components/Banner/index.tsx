@@ -11,16 +11,16 @@ import 'swiper/css/autoplay';
 export default function Banner() {
   const BannerList = [
     {
-      src: 'src/assets/ModoBanner1.jpeg',
+      src: 'public/images/ModoBanner1.jpeg',
     },
     {
-      src: 'src/assets/ModoBanner2.jpeg',
+      src: 'public/images/ModoBanner2.jpeg',
     },
     {
-      src: 'src/assets/ModoBanner3.jpeg',
+      src: 'public/images/ModoBanner3.jpeg',
     },
     {
-      src: 'src/assets/ModoBanner4.jpeg',
+      src: 'public/images/ModoBanner4.jpeg',
     },
   ];
   SwiperCore.use([Autoplay]);
@@ -47,16 +47,16 @@ export default function Banner() {
           </SwiperSlide>
         ))}
         {/* <SwiperSlide>
-          <img className="cursor-pointer" src="src/assets/ModoEventBanner.jpeg"></img>
+          <img className="cursor-pointer" src="public/images/ModoEventBanner.jpeg"></img>
         </SwiperSlide>
         <SwiperSlide>
-          <img className="w-full h-72 " src="src/assets/kreamImg.png"></img>
+          <img className="w-full h-72 " src="public/images/kreamImg.png"></img>
         </SwiperSlide>
         <SwiperSlide>
-          <img className="w-full h-72 " src="src/assets/whiteModo.png"></img>
+          <img className="w-full h-72 " src="public/images/whiteModo.png"></img>
         </SwiperSlide>
         <SwiperSlide>
-          <img className="w-full h-72 " src="src/assets/pinkModo.png"></img>
+          <img className="w-full h-72 " src="public/images/pinkModo.png"></img>
         </SwiperSlide> */}
       </Swiper>
     </>
